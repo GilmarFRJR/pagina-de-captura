@@ -1,0 +1,562 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    height: 5000px;
+}
+
+
+header{
+    width: 100%;
+    height: 150vh;
+    background-color: rgba(0, 0, 0, 0.747);
+
+    position: relative;
+    
+}
+
+
+#containerHeader{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#capa{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: -1;
+}
+
+#capa img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#faixa{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.438), rgba(0,0,0,0));
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    top: 0;
+
+    z-index: 999;
+}
+
+
+#logo{
+    display: flex;
+    flex-direction: row;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 0 20px 50px;
+
+    z-index: 999;
+}
+
+
+#logo img{
+    width: 90px;
+}
+
+
+#logo p{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin: 5px 0 0 10px;
+}
+
+
+#logo span{
+    color: red;
+}
+
+
+#logo button{
+    padding: 12px 40px 12px 40px;
+
+    background-color: rgba(255, 255, 255, 0);
+    border: solid white 2px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    position: absolute;
+    right: 50px;
+    top: 45%;
+    transform: translateY(-50%);
+
+    transition: 0.2s;
+}
+
+
+#logo button:hover{
+    background-color: white;
+    color: black;
+}
+
+
+#containerTituloEtimer{
+    width: 600px;
+    height: 800px;
+}
+
+
+#titulo{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+#titulo p:nth-child(1){
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+}
+
+
+h1{
+    font-size: 45px;
+    margin: 15px 0 40px 0;
+}
+
+
+h1 span:first-child{
+    color: aquamarine;
+}
+
+h1 span:last-child{
+    color: rgb(255, 0, 0);
+}
+
+
+#titulo p:nth-child(3){
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+
+    padding: 0 40px 0 40px;
+}
+
+
+#timer{
+    width: 100%;
+    height: 70%;
+    background-color: rgb(231, 238, 231);
+    border-radius: 8px;
+
+    display: grid;
+    grid-template: 0.7fr 1.8fr 0.6fr 0.8fr 1fr / 1fr ;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+#detalhe{
+    background-color: #662d91;
+    width: 15px;
+    height: 500px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: rotate(-50deg) translate(900%);
+    
+}
+
+
+#timer > div:nth-child(1){
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+
+#timer > div:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.cedula{
+    width: 100px;
+    height: 100px;
+}
+
+
+.timerEstilo{
+    height: 75%;
+    font-size: 30px;
+    border: black solid 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.timerEstilo + p{
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+#timer > div:nth-child(3){
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 100px 0 100px;
+}
+
+
+#timer > div:nth-child(4){
+    text-align: center;
+    margin: 0 auto 0 auto;
+    position: relative;
+}
+
+
+#timer > div:nth-child(4) > div:nth-child(1){
+    width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#timer > div:nth-child(4) > div:nth-child(1) > p:nth-child(1){
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+#timer > div:nth-child(4) > div:nth-child(1) > p:nth-child(2){
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+#containerBarraPorcentagem{
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 30px;
+    margin: 0 auto 0 auto;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+#timer > div:nth-child(4){
+    width: 100%;
+}
+
+
+#barraPorcentagem{
+    width: 37.5%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.637);
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+} 
+
+
+.barra {
+    background-color: rgba(0, 0, 0, 0.856);
+    width: 10px;
+    height: 200%;
+    transform: rotate(-35deg) translate(130%);
+  }
+
+
+
+#timer a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#timer button{
+    width: 300px;
+    height: 70px;
+
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+
+    background-color: #662d91;
+    border: solid #662d91 2px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+
+#timer button:hover{
+    background-color: white;
+    color: #662d91;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-height: 1100px){
+    header{
+        height: 100vh;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    #logo{
+        width: 1400px;
+    }
+}
+
+
+@media screen and (max-width: 730px){
+    #containerTituloEtimer{
+        height: 900px;
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-height: 700px){
+    header{
+        height: 1200px;
+    }
+}
+
+
+@media screen and (max-width: 620px){
+    #logo{
+        justify-content: center;
+        padding: 25px 0 20px 0;
+    }
+
+    #logo button{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 560px){
+    #detalhe{
+        height: 280px;
+        transform: rotate(-50deg) translate(500%);
+    }
+
+
+    .sumirCedula{
+        display: none;
+    }
+
+
+    #timer > div:nth-child(4) > div:nth-child(1){
+        width: 90%;
+    }
+
+
+    #containerBarraPorcentagem{
+        width: 90%;
+    }
+
+
+    #timer > div:nth-child(3){
+        padding: 0 40px 0 40px;
+    }
+}
+
+
+@media screen and (max-width: 510px){
+    #titulo p:nth-child(3){
+        font-size: 14px;
+        padding: 0 20px 0 20px;
+    }
+
+    #titulo{
+        padding: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 460px){    
+    h1{
+        font-size: 35px;
+        margin: 15px 0 20px 0;
+    }
+
+
+    #timer > div:nth-child(1){
+        font-size: 25px;
+    }
+}
+
+
+@media screen and (max-width: 420px){
+    #timer > div:nth-child(2){
+        flex-direction: column;
+    }
+
+    .cedula{
+        margin-bottom: 18px;
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .timerEstilo + p{
+        margin-top: 7px;
+    }
+
+
+    #containerTituloEtimer{
+        height: 970px;
+    }
+
+
+    #timer > div:nth-child(1){
+        padding-bottom: 15px;
+    }
+
+
+    #timer > div:nth-child(3){
+        font-size: 14px;
+        padding: 0 10px 15px 10px;
+        display: flex;
+        align-items: center;
+    }
+
+
+    #timer button{
+        width: 90%;
+        padding: 0 10px 0 10px;
+    }
+}
+
+
+@media screen and (max-width: 350px){
+    h1{
+        font-size: 26px;
+    }
+}
+
+
+@media screen and (max-width: 330px){
+    #timer > div:nth-child(1){
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px 0 30px
+    }
+}
+
+
+@media screen and (max-width: 300px){
+    #titulo p:nth-child(1){
+        font-size: 20px;
+    }
+
+
+    #logo img{
+        width: 60px;
+    }
+    
+    
+    #logo p{
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        margin: 5px 0 0 10px;
+    }
+
+
+    #timer > div:nth-child(4) > div:nth-child(1){
+        flex-direction: column;
+    }
+
+
+    #timer button{
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (max-width: 260px){
+   header{
+    height: 1300px;
+   }
+
+
+   h1{
+    width: 150px;
+    margin: 15px auto 15px auto;
+   }
+
+
+   #containerTituloEtimer{
+    height: 1050px;
+    width: 90%;
+   }
+
+
+#titulo p:nth-child(3){
+    padding: 0;
+   }
+}
+
+
+@media screen and (max-width: 220px){
+    #detalhe{
+        display: none;
+    }
+
+
+    #timer > div:nth-child(1){
+        padding: 0;
+    }
+}
+
