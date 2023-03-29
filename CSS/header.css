@@ -7,9 +7,16 @@
     word-wrap: break-word;
 }
 
+
+html{
+    overflow-x: hidden;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
-    height: 5000px;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 230px;
 }
 
 
@@ -43,7 +50,7 @@ header{
 }
 
 #capa img{
-    width: 100%;
+    width: 200%;
     height: 100%;
 }
 
