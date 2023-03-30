@@ -1,0 +1,275 @@
+/* section 3 começo---------------------------------------------------------------------------------------------------------- */
+
+section:nth-child(3){
+    background-image: url(../IMG/background.jpg);
+    opacity: 0.95;
+    background-attachment: fixed;
+    padding: 30px 0 30px 0;
+    margin-top: 60px;
+}
+
+
+section:nth-child(3) > p:first-child{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-shadow: -1px -1px 0 #662d91, 1px -1px 0 #662d91, -1px 1px 0 #662d91, 1px 1px 0 #662d91;
+
+    width: 700px;
+    text-align: center;
+    margin: auto;
+}
+
+
+#containerHabilidades{
+    background-color: rgba(255, 255, 255, 0.932);
+    width: 700px;
+    margin: 50px auto 0 auto;
+    padding: 80px 30px 30px 30px;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr;
+    position: relative;
+}
+
+
+#textoMudando{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+#containerHabilidades > div p{
+    font-weight: bold;
+}
+
+
+
+
+
+.habilidadeBarra{
+    width: 90%;
+    height: 20px;
+    margin: 25px;
+
+    border: solid black 2px;
+}
+
+
+.progresso1{
+    width: 15%;
+    height: 100%;
+    background-color: red;
+
+    transition: width 1s ease, background-color 1s ease;
+}
+
+.progresso2{
+    width: 7%;
+    height: 100%;
+    background-color: red;
+
+    transition: width 1s ease, background-color 1s ease;
+}
+
+.progresso3{
+    width: 10%;
+    height: 100%;
+    background-color: red;
+
+    transition: width 1s ease, background-color 1s ease;
+}
+
+.progresso4{
+    width: 4%;
+    height: 100%;
+    background-color: red;
+
+    transition: width 1s ease, background-color 1s ease;
+}
+
+.progresso5{
+    width: 15%;
+    height: 100%;
+    background-color: red;
+
+    transition: width 1s ease, background-color 1s ease;
+}
+
+.progresso6{
+    width: 22%;
+    height: 100%;
+    background-color: red;
+
+    transition: width 1s ease, background-color 1s ease;
+}
+
+
+
+#textoMudando[data-state="fezEvento"] ~ .progresso1 {
+    width: 40%;
+    background-color: orangered;
+  }
+
+  #textoMudando[data-state="fezCurso"] ~ .progresso1 {
+    width: 85%;
+    background-color: greenyellow;
+  }
+
+
+
+  #textoMudando[data-state="fezEvento"] ~ .progresso2 {
+    width: 30%;
+    background-color: orangered;
+  }
+
+  #textoMudando[data-state="fezCurso"] ~ .progresso2 {
+    width: 95%;
+    background-color: greenyellow;
+  }
+
+
+
+  #textoMudando[data-state="fezEvento"] ~ .progresso3 {
+    width: 30%;
+    background-color: orangered;
+  }
+
+  #textoMudando[data-state="fezCurso"] ~ .progresso3 {
+    width: 70%;
+    background-color: greenyellow;
+  }
+
+
+
+  #textoMudando[data-state="fezEvento"] ~ .progresso4 {
+    width: 50%;
+    background-color: orangered;
+  }
+
+  #textoMudando[data-state="fezCurso"] ~ .progresso4 {
+    width: 85%;
+    background-color: greenyellow;
+  }
+
+
+
+  #textoMudando[data-state="fezEvento"] ~ .progresso5 {
+    width: 36%;
+    background-color: orangered;
+  }
+
+  #textoMudando[data-state="fezCurso"] ~ .progresso5 {
+    width: 75%;
+    background-color: greenyellow;
+  }
+
+
+
+  #textoMudando[data-state="fezEvento"] ~ .progresso6 {
+    width: 53%;
+    background-color: orangered;
+  }
+
+  #textoMudando[data-state="fezCurso"] ~ .progresso6 {
+    width: 80%;
+    background-color: greenyellow;
+  }
+
+
+
+  #containerInfos img{
+    width: 140px;
+}
+
+
+#containerInfos{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0 50px 0;
+}
+
+
+#containerInfos div{
+    color: #ffffff;
+    width: 230px;
+    text-align: center;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+    border: solid rgb(255, 255, 255) 3px;
+    background-color: rgba(255, 255, 255, 0.356);
+    padding: 15px;
+}
+
+
+#containerInfos div p:first-of-type{
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+    margin-bottom: 8px;
+}
+
+  /* section 3 fim---------------------------------------------------------------------------------------------------------- */
+
+
+/* section 4 começo---------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* section 4 fim---------------------------------------------------------------------------------------------------------- */
+
+
+  @media screen and (max-width: 760px){
+    #containerHabilidades{
+        width: 90%;
+    }
+
+    section:nth-child(3) > p:first-child{
+        width: 80%;
+    }
+
+
+    #containerInfos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    #containerInfos div{
+        margin-bottom: 50px;
+    }
+  }
+
+
+  @media screen and (max-width: 460px){
+    #containerHabilidades{
+        padding: 150px 0 0 0;
+        text-align: center;
+    }
+
+    .habilidadeBarra{
+        margin: 25px auto 25px auto;
+    }
+
+
+    section:nth-child(3) > p:first-child{
+        width: 90%;
+        font-size: 27px;
+    }
+  }
+
+
+  @media screen and (max-width: 280px){
+    #containerInfos div{
+        width: 90%;
+    }
+  }
