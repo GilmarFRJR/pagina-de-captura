@@ -113,79 +113,6 @@ section:nth-child(3) > p:first-child{
 }
 
 
-
-#textoMudando[data-state="fezEvento"] ~ .progresso1 {
-    width: 40%;
-    background-color: orangered;
-  }
-
-  #textoMudando[data-state="fezCurso"] ~ .progresso1 {
-    width: 85%;
-    background-color: greenyellow;
-  }
-
-
-
-  #textoMudando[data-state="fezEvento"] ~ .progresso2 {
-    width: 30%;
-    background-color: orangered;
-  }
-
-  #textoMudando[data-state="fezCurso"] ~ .progresso2 {
-    width: 95%;
-    background-color: greenyellow;
-  }
-
-
-
-  #textoMudando[data-state="fezEvento"] ~ .progresso3 {
-    width: 30%;
-    background-color: orangered;
-  }
-
-  #textoMudando[data-state="fezCurso"] ~ .progresso3 {
-    width: 70%;
-    background-color: greenyellow;
-  }
-
-
-
-  #textoMudando[data-state="fezEvento"] ~ .progresso4 {
-    width: 50%;
-    background-color: orangered;
-  }
-
-  #textoMudando[data-state="fezCurso"] ~ .progresso4 {
-    width: 85%;
-    background-color: greenyellow;
-  }
-
-
-
-  #textoMudando[data-state="fezEvento"] ~ .progresso5 {
-    width: 36%;
-    background-color: orangered;
-  }
-
-  #textoMudando[data-state="fezCurso"] ~ .progresso5 {
-    width: 75%;
-    background-color: greenyellow;
-  }
-
-
-
-  #textoMudando[data-state="fezEvento"] ~ .progresso6 {
-    width: 53%;
-    background-color: orangered;
-  }
-
-  #textoMudando[data-state="fezCurso"] ~ .progresso6 {
-    width: 80%;
-    background-color: greenyellow;
-  }
-
-
-
   #containerInfos img{
     width: 140px;
 }
@@ -222,19 +149,182 @@ section:nth-child(3) > p:first-child{
 
 /* section 4 começo---------------------------------------------------------------------------------------------------------- */
 
+section:nth-child(4){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 220px 0 60px 0;
+
+  position: relative;
+}
+
+
+section:nth-child(4) > p{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+
+  width: 1000px;
+  position: absolute;
+  top: 60px;
+}
+
+
+section:nth-child(4) > p > span{
+  color: #662d91;
+}
+
+
+#containerInput{
+  width: 600px;
+  text-align: center;
+  padding: 0 0 100px 0;
+
+  background-image: url(../IMG/predios.jpg);
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.95;
+  border-radius: 10px;
+
+  position: relative;
+}
+
+
+#containerInput > p{
+  width: 80%;
+  margin: 30px auto 40px auto;
+  font-size: 20px;
+  font-weight: bold;
+  color:  #662d91;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+
+#inputsDeTexo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+#inputsDeTexo p , #inputCheck p , #inputCheck label{
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+
+#inputsDeTexo input{
+  width: 200px;
+  height: 30px;
+  border: solid black 2px;
+  border-radius: 5px;
+  margin: 20px 0 10px 0;
+  padding: 0 0 0 10px;
+}
+
+
+#inputCheck{
+  position: relative;
+  padding: 40px 0 0 0;
+
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr ;
+}
+
+
+#inputCheck p{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+
+#inputCheck label{
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+
+#enviarFormulario{
+  width: 170px;
+  height: 30px;
+  
+  color: white;
+  font-weight: bold;
+  background-color:  #662d91;
+  border: solid black 2px;
+  border-radius: 8px;
+
+  position: absolute;
+  bottom: 30px;
+  transform: translate(-50%);
+}
+
+
+#envioFeitoComSucesso{
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0 15px 0 15px;
+
+  background-color: greenyellow;
+  z-index: 999;
+  border-radius: 10px;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  display: none;
+}
+
+
+#envioFeitoComSucesso span{
+  color: #662d91;
+}
+
+
+#envioFeitoComSucesso img{
+  width: 60px;
+  margin-top: 30px;
+}
 
 
 
 /* section 4 fim---------------------------------------------------------------------------------------------------------- */
 
+@media screen and (max-width: 1000px){
+  section:nth-child(4) > p{
+    width: 90%;
+    padding: 0;
+  }
+}
 
-  @media screen and (max-width: 760px){
+
+  @media screen and (max-width: 765px){
     #containerHabilidades{
         width: 90%;
     }
 
     section:nth-child(3) > p:first-child{
         width: 80%;
+    }
+
+
+    section:nth-child(4) > p{
+      font-size: 20px;
+      top: 30px;
     }
 
 
@@ -246,6 +336,13 @@ section:nth-child(3) > p:first-child{
 
     #containerInfos div{
         margin-bottom: 50px;
+    }
+  }
+
+
+  @media screen and (max-width: 630px){
+    #containerInput{
+      width: 95%;
     }
   }
 
@@ -268,8 +365,37 @@ section:nth-child(3) > p:first-child{
   }
 
 
+  @media screen and (max-width: 400px){
+    #inputCheck{
+      grid-template: 1fr 1fr 1fr / 1fr;
+    }
+
+
+    #envioFeitoComSucesso{
+      font-size: 28px;
+    }
+  }
+
+
   @media screen and (max-width: 280px){
     #containerInfos div{
         width: 90%;
+    }
+
+
+    section:nth-child(4) > p{
+      font-size: 18px;
+    }
+  }
+
+
+  @media screen and (max-width: 230px){
+    #containerInput > p{
+      font-size: 17px;
+    }
+
+    
+    #inputsDeTexo input{
+      width: 95%;
     }
   }
