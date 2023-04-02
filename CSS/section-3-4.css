@@ -119,9 +119,11 @@ section:nth-child(3) > p:first-child{
 
 
 #containerInfos{
+    width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 100px 0 50px 0;
+    margin: 0 auto 0 auto;
 }
 
 
@@ -303,6 +305,13 @@ section:nth-child(4) > p > span{
 
 
 /* section 4 fim---------------------------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1500px){
+  #containerInfos{
+    width: 1500px;
+  }
+}
+
 
 @media screen and (max-width: 1000px){
   section:nth-child(4) > p{
